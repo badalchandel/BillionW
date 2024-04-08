@@ -287,10 +287,12 @@ img {
 .home__social-icon{
     font-size: 1.25rem;
     color: var(--first-color);
+    transition: .4s;
 }
 
 .home__social-icon:hover{
     color: var(--first-color-alt);
+    transform: rotate(-360deg) scale(2);
 }
 
 .home__blob{
