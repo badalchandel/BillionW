@@ -125,3 +125,39 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+const weathersearch = document.querySelector(".weathersearch");
+const weathersearchbtn = document.querySelector(".weathersearchbtn");
+const weathersearchbtnlogo = document.querySelector(".weathersearchbtnlogo");
+const weathersearchinput = document.querySelector(".weathersearchinput");
+const weathermsg = document.querySelector(".weathermsg");
+const weatherapi = "https://api.openweathermap.org/data/2.5/weather?q=bangkok&units=metric&appid=01d9f2d66b5fb9c863aa86b5cb001cd2";
+
+weathersearchbtn.addEventListener("click", () => {
+  weathersearch.classList.toggle("active");
+  weathersearchinput.focus();
+});
+
+const getweatherData = async () => {
+  let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${weathersearchinput.value}&units=metric&appid=01d9f2d66b5fb9c863aa86b5cb001cd2
+  `);
+  let weatherdata = await response.json();
+  let temp = weatherdata.main.temp;
+  let cityName = weatherdata.name;
+  weathermsg.innerText = temp;
+  setTimeout(function() {
+    weathermsg.style.display = "none";
+  }, 5000);
+};
+
+weathersearchbtnlogo.addEventListener("click", () => {
+  weathermsg.style.display = "block";
+  getweatherData();
+});
+
+
+
+
+
+
+

@@ -187,6 +187,76 @@ img {
     align-items: center;
 }
 
+.weathersearch{
+    display: flex;
+    /* margin-left: auto;
+    margin-right: auto; */
+    justify-content: center;
+    align-items: center;
+}
+
+.weathersearchinput{
+    max-height: 50px;
+    max-width: 100px;
+    transition: width 0.3s ease;
+    border: 0;
+    font-size: 1rem;
+    padding: .3rem;
+    border-radius: 50px;
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+.weathersearchbtn{
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    border: 0;
+    /* position: absolute; */
+    cursor: pointer;
+    /* top: 3px;
+    left: 1px; */
+    background-color: #fff;
+    max-height: 26px;
+    max-width: 45px;
+    margin: 0;
+}
+
+.weatherimage{
+    width: 100%;
+}
+
+.weathersearchbtnlogo{
+    outline: none;
+    border: none;
+    background-color: black;
+    color: #fff;
+    border-radius: 50px;
+    padding: .2rem;
+    cursor: pointer;
+    transition: .4s;
+    margin-left: .5rem;
+}
+
+.weathersearchbtnlogo:hover{
+    transform: scale(1.2);
+}
+
+.weathermsg{
+    margin-left: .5rem;
+    font-size: 75%;
+
+}
+
+.weathersearch.active .weathersearchinput{
+    width: 50px;
+}
+.weathersearch.active .weathersearchbtn{
+    transform: translateX(-47px);
+}
+.weathersearchbtn:focus, .weathersearchinput:focus{
+    outline: none;
+}
+
 .nav__logo,
 .nav__toggle{
     color: var(--title-color);
