@@ -146,18 +146,13 @@ const getweatherData = async () => {
   let cityName = weatherdata.name;
   weathermsg.innerText = temp;
   setTimeout(function() {
-    weathermsg.style.display = "none";
-  }, 5000);
+    weathermsg.style.display = "";
+    weathersearchinput.value = "";
+    weathermsg.innerText = "";
+  }, 3000);
 };
 
 weathersearchbtnlogo.addEventListener("click", () => {
   weathermsg.style.display = "block";
   getweatherData();
 });
-
-
-
-
-
-
-
