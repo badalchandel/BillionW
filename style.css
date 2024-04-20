@@ -649,8 +649,8 @@ img {
       overflow: hidden;
       position: relative;
       z-index: 5;
-      width: 15rem;
-      height: 12rem;
+      width: 18rem;
+      height: 15rem;
       background-color: var(--pink-500);
       border-radius: 0.5rem;
     }
@@ -702,8 +702,8 @@ img {
       transition: all 0.3s ease-in-out 0.4s;
     }
     .c-img{
-      width: 15rem;
-      height: 12rem;
+      width: 18rem;
+      height: 15rem;
     }
 
 
@@ -950,6 +950,12 @@ img {
     }
     .qualification__data{
         gap: .5rem;
+    }
+}
+
+@media screen and (max-width: 568px){
+    .home__blob{
+        width: 270px;
     }
 }
 
