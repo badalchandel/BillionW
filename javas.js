@@ -126,17 +126,11 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-const weathersearch = document.querySelector(".weathersearch");
+
 const weathersearchbtn = document.querySelector(".weathersearchbtn");
-const weathersearchbtnlogo = document.querySelector(".weathersearchbtnlogo");
 const weathersearchinput = document.querySelector(".weathersearchinput");
 const weathermsg = document.querySelector(".weathermsg");
 const weatherapi = "https://api.openweathermap.org/data/2.5/weather?q=bangkok&units=metric&appid=01d9f2d66b5fb9c863aa86b5cb001cd2";
-
-weathersearchbtn.addEventListener("click", () => {
-  weathersearch.classList.toggle("active");
-  weathersearchinput.focus();
-});
 
 const getweatherData = async () => {
   let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${weathersearchinput.value}&units=metric&appid=01d9f2d66b5fb9c863aa86b5cb001cd2
@@ -152,7 +146,28 @@ const getweatherData = async () => {
   }, 3000);
 };
 
-weathersearchbtnlogo.addEventListener("click", () => {
+weathersearchbtn.addEventListener("click", () => {
   weathermsg.style.display = "block";
   getweatherData();
 });
+
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}

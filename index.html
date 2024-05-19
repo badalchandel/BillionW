@@ -15,18 +15,21 @@
 <body>
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">BillionW</a>
+            <a href="#" class="nav__logo">Billion<span class="w">W</span></a>
 
             <!-- weather function -->
             <div class="weathersearch">
                 <input class="weathersearchinput" type="text" placeholder="temperature">
-                <button class="weathersearchbtn"><img class="weatherimage" src="billionpng.png"></button>
                 <p class="weathermsg"></p>
-                <button class="weathersearchbtnlogo"><i class="uil uil-celsius"></i><div class="tempclick">
-                    <span>Click</span>
-                </div></button>
+                <button class="weathersearchbtn">
+                    <i class="uil uil-search"></i>
+                </button>
             </div>
 
+            <a class="whatsapp" target="_blank" href="https://api.whatsapp.com/send?phone=8120753156&text=Hi!">
+                <i class="uil uil-whatsapp"></i>
+            </a>
+            
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__item">
@@ -105,8 +108,8 @@
                         <h1 class="home__title">Hi, I'am BillionW</h1>
                         <h3 class="home__subtitle">Badal Chandel</h3>
                         <p class="home__description">YouTuber || Developer</p>
-                        <a href="#contact" class="button button--flex">
-                            Contact Me <i class="uil uil-message button__icon"></i>
+                        <a href="#contact" class="button button--flex">Contact Me
+                            <i class="uil uil-message button__icon"></i>
                         </a>
                     </div>
                 </div>
@@ -134,12 +137,21 @@ I live in indore, madhya pradesh, Bharat.<br>"I always believe in learning new s
                     </p>
                     <div class="about__info">
                         <div>
-                            <span class="about__info-title">1+</span>
+                            <span class="about__info-title">3+</span>
                             <span class="about__info-name">Years <br> Experience</span>
                         </div>
                         <div>
                             <span class="about__info-title">5+</span>
-                            <span class="about__info-name">Completed <br> Project</span>
+                            <div class="dropdown">
+                                <button onclick="myFunction()" class="dropbtn">Completed Mini Project</button>
+                                <div id="myDropdown" class="dropdown-content">
+                                    <a href="">Currency Converter Application</a>
+                                    <a href="">QR Code Generator Application</a>
+                                    <a href="">Rock Paper Scissors Game</a>
+                                    <a href="">Tic Tac Toe Game</a>
+                                    <a href="">Weather Application</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="about__buttons">
