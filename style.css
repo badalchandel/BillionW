@@ -815,10 +815,6 @@ img {
     display: block;
 }
 
-/* .qualification__button.qualification__active{
-    color: var(--first-color);
-} */
-
 .contact__container{
     row-gap: 3rem;
 }
